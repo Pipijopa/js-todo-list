@@ -1,8 +1,9 @@
 .card {
-    display: flex;
+    display: flex;    
     flex-flow: column nowrap;
-
+    border-radius: 16px;
     border: 1px solid black;
+    
 }
 
 .card__header {
@@ -10,24 +11,28 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
-
-    padding: 8px 0;
-    margin-bottom: 12px;
 }
 
-.card__description {
+.card__body {
     padding: 16px;
     font-size: 20px;
+    border-top: 1px solid black;
 }
 
 .card__title {
     text-overflow: ellipsis;
     overflow: hidden;
     font-size: 24px;
+    margin-right: auto;
 }
 
 .card__number {
     padding: 0 16px;
+}
+
+.card__userId {
+    padding: 0 16px;
+    margin-right: auto;
 }
 
 .card__remove {

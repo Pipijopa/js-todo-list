@@ -1,7 +1,4 @@
-/* Стили для подложки */
-
 .overlay {
-    /* Скрываем подложку  */
     opacity: 0;
     visibility: hidden;
 
@@ -15,25 +12,19 @@
     transition: 0.3s all;
 }
 
-/* Стили для модальных окон */
-
-.modal {
-    /* Скрываем окна  */
+.modal, .modalUpdate {
     opacity: 0;
     visibility: hidden;
 
-    /*  Установаем ширину окна  */
     width: 100%;
     max-width: 500px;
 
-    /*  Центрируем и задаем z-index */
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 30; /* Должен быть выше чем у подложки*/
+    z-index: 30;
 
-    /*  Побочные стили   */
     box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
     text-align: center;
     padding: 30px;
@@ -42,9 +33,9 @@
     transition: 0.3s all;
 }
 
-/* Стили для активных классов подложки и окна */
 
 .modal.active,
+.modalUpdate.active,
 .overlay.active {
     opacity: 1;
     visibility: visible;
@@ -80,12 +71,18 @@
     width: 400px;
 }
 
-.modal__control-des {
-    height: 210px;
+.modal__control-userId {
     width: 400px;
 }
 
-/* Стили для кнопки закрытия */
+.modal__control-des {
+    height: 210px;
+    min-height: 50px;
+    width: 400px;
+    min-width: 400px;
+    max-width: 400px;
+}
+
 
 .modal__cross {
     width: 15px;
@@ -97,7 +94,8 @@
     cursor: pointer;
 }
 
-.form-errors {
+.form-errors,
+.formUpdate-errors {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;

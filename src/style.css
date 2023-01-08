@@ -39,11 +39,21 @@ button {
     padding: 8px;
     display: inline-block;
     text-decoration: none;
-    background-color: #414b52;
+    border-radius: 8px;
+    background-color: #679cc2;
     margin: 10px;
     color: #fff;
-    border-radius: 3px;
+    
 }
+
+button:hover {
+    background-color: #7a0303;
+}
+
+button:active {
+    background-color: #0a0a0a;
+}
+
 
 a:hover {
     color: #6e87e1;
